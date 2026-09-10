@@ -15,32 +15,12 @@ LAB02/
 ├── docker-compose.yml
 └── README.md
 ```
-
-## Variables de entorno
-
-El proyecto utiliza variables de entorno para la configuración de la base de datos y la API.
-
-Para utilizarlas, se debe copiar el archivo de ejemplo:
-
-```bash
-cp .env.example .env
-```
-
-Variables configuradas:
-- `DB_USER`: Usuario de la base de datos.
-- `DB_PASSWORD`: Contraseña de la base de datos.
-- `DB_NAME`: Nombre de la base de datos.
-- `DB_PORT`: Puerto de PostgreSQL (5432).
-- `PORT`: Puerto interno de la API (3000).
-
 Tipos de redes en Docker
 
-Docker permite utilizar diferentes tipos de redes para la comunicación entre contenedores.
+Docker cuenta con diferentes tipos de redes, como bridge permite la comunicación entre contenedores dentro de una red aislada y es la más utilizada. Host permite que el contenedor utilice directamente la red del equipo anfitrión. Overlay permite la comunicación entre contenedores ubicados en diferentes equipos Docker.
 
-Bridge
+Tipos de volúmenes en Docker
 
-Es la red más utilizada por Docker. Permite que los contenedores se comuniquen entre sí dentro de una red aislada.
-
-Host
-
-El contenedor utiliza directamente la red del equipo anfitrión, reduciendo el aislamiento de red.
+Named Volumes son administrados por Docker y permiten conservar los datos de forma persistente. 
+Bind Mounts conectan una carpeta o archivo del equipo anfitrión con una ubicación dentro del contenedor. 
+Tmpfs Mounts almacenan datos temporalmente en la memoria RAM y estos datos desaparecen cuando el contenedor se detiene.
