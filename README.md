@@ -41,6 +41,6 @@ Bridge
 
 Es la red más utilizada por Docker. Permite que los contenedores se comuniquen entre sí dentro de una red aislada.
 
-2. Host
+Host
 
 El contenedor utiliza directamente la red del equipo anfitrión, reduciendo el aislamiento de red.
