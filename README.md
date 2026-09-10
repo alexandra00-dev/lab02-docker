@@ -118,33 +118,10 @@ Docker ofrece tres mecanismos principales para persistir datos más allá del ci
 
 ---
 
-## Guía de Conventional Commits Usados
+## Capturas del Despliegue (Opcional)
 
-Este repositorio sigue el estándar de **Conventional Commits**:
-- `chore: initial project configuration and gitignore`
-- `feat(api): create lightweight nodejs api and dockerfile`
-- `feat(compose): add docker-compose with 3 api replicas, postgresql and volume persistence`
-- `docs: add deployment instructions, network and volume explanations in readme`
+### 1. Contenedores en Ejecución (`docker compose ps`)
+*(Adjuntar captura aquí)*
 
----
-
-## Pasos para Subir a tu Repositorio Público de GitHub
-
-1. Crea un nuevo repositorio en tu cuenta de GitHub (ejemplo: `lab02-docker-compose`) y configúralo como **Público**.
-2. En tu terminal, dentro de la carpeta `lab02`:
-   ```bash
-   git remote add origin https://github.com/TU_USUARIO/lab02-docker-compose.git
-   git branch -M main
-   git push -u origin main
-   ```
-
----
-
-## Capturas del Proyecto Desplegado (Opcional)
-
-*(Espacio para adjuntar capturas de pantalla de la terminal con `docker compose ps` y del navegador en los puertos 3001, 3002 y 3003).*
-
-```text
-[Captura 1: docker compose up y docker compose ps]
-[Captura 2: Respuesta de las 3 réplicas en el navegador o curl]
-```
+### 2. Comprobación de las 3 Réplicas de la API
+*(Adjuntar captura aquí)*
