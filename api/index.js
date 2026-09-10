@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  
+
   const responseData = {
     status: 'success',
     message: 'API respondiendo correctamente',
