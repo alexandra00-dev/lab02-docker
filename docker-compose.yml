@@ -1,0 +1,35 @@
+services:
+  # Servicio de Base de Datos PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: lab02_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:5432"
+
+  # Servicio API con 3 copias (réplicas) construidas localmente
+  api:
+    build: ./api
+    ports:
+      - "3001-3003:3000"
+    environment:
+      - PORT=${PORT}
+      - DB_HOST=db
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      - db
+    deploy:
+      replicas: 3
+
+# Volumen persistente para la base de datos
+volumes:
+  db_data:
