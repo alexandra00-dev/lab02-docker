@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API ligera para ejercicio de Docker Compose",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
